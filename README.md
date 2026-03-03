@@ -58,7 +58,6 @@ Buat Spreadsheet baru dan siapkan 5 *sheet* berikut:
 ## 📱 Tangkapan Layar (Screenshots)
 <img width="1891" height="869" alt="image" src="https://github.com/user-attachments/assets/c7c287c1-edd7-485c-b9f1-307de2c20d0e" />
 
-*(Tambahkan gambar screenshot aplikasi Anda di sini dengan format: `![Deskripsi](link-gambar.png)`)*
 * **Halaman Login & Otentikasi**
 * **Dashboard Metrik & Scrum Board**
 * **Panel Kalender Konsultasi**
