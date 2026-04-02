@@ -7,25 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
     <style>
         :root {
-    /* Latar belakang diubah dari hitam pekat ke Dark Charcoal Blue */
             --bg-color: #14161a; 
-            
-            /* Panel sedikit lebih terang dari background, tidak terlalu transparan */
             --panel-bg: rgba(30, 33, 40, 0.95);
-            
-            /* Teks utama diubah jadi abu-abu silver lembut, bukan putih menyilaukan */
             --text-main: #c5c8d4;
-
-            /* KUNING: Dari Neon Lemon (#fcee0a) jadi Golden Amber */
             --cyber-yellow: #e5c02b;
-
-            /* CYAN: Dari Pure Cyan (#00f0ff) jadi Electric Teal */
             --cyber-cyan: #00adb5;
-
-            /* PINK: Dari Hot Pink (#ff003c) jadi Deep Raspberry */
             --cyber-pink: #d6336c;
-
-            /* Warna tambahan untuk bayangan agar lebih halus */
             --shadow-soft: rgba(0, 0, 0, 0.5);
         }
 
@@ -35,9 +22,7 @@
             font-family: 'Share Tech Mono', monospace;
             margin: 0;
             padding: 20px;
-            padding-bottom: 70px; /* Memberi ruang agar konten tidak tertutup footer */
-            
-            /* Tekstur Background Profesional: Dot-Matrix dengan efek Vignette gelap di sudut */
+            padding-bottom: 70px; 
             background-image: 
                 radial-gradient(circle at 50% 50%, transparent 10%, #0a0c10 100%),
                 radial-gradient(rgba(0, 173, 181, 0.15) 1px, transparent 1px);
@@ -53,7 +38,6 @@
             text-transform: uppercase;
         }
 
-        /* Glitch Effect Header */
         .header {
             text-align: center;
             border-bottom: 2px solid var(--cyber-cyan);
@@ -61,7 +45,6 @@
             margin-bottom: 30px;
         }
 
-        /* --- LOGIN SCREEN --- */
         #login-screen {
             position: absolute;
             top: 50%;
@@ -78,7 +61,7 @@
 
         input[type="text"], input[type="password"], input[type="date"], input[type="file"] {
             width: 90%;
-            background: rgba(51, 51, 51, 0.3); /* Semi transparan gelap */
+            background: rgba(51, 51, 51, 0.3); 
             color: var(--cyber-cyan);
             border: 1px solid var(--cyber-cyan);
             padding: 10px;
@@ -118,10 +101,10 @@
         }
 
         .logo-container img {
-            height: 60px; /* Tinggi logo, lebar akan menyesuaikan otomatis */
+            height: 60px; 
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0 0 5px rgba(0, 173, 181, 0.5)); /* Pendaran tipis warna cyan */
+            filter: drop-shadow(0 0 5px rgba(0, 173, 181, 0.5)); 
             transition: transform 0.3s ease;
         }
 
@@ -130,7 +113,6 @@
             filter: drop-shadow(0 0 8px var(--cyber-yellow));
         }
 
-        /* --- APP SCREEN --- */
         #app-screen { display: none; }
         
         .app-footer {
@@ -142,7 +124,7 @@
             padding: 12px 0;
             background: rgba(10, 12, 16, 0.95);
             border-top: 1px solid rgba(0, 173, 181, 0.3);
-            color: #6c7080; /* Warna abu-abu redup agar tidak mendominasi */
+            color: #6c7080; 
             font-family: 'Share Tech Mono', monospace;
             font-size: 0.85rem;
             letter-spacing: 1px;
@@ -159,7 +141,6 @@
             border-left: 5px solid var(--cyber-yellow);
         }
 
-        /* Scrum Board Layout */
         .scrum-board {
             display: flex;
             gap: 20px;
@@ -196,10 +177,9 @@
         .done-col { border-color: var(--cyber-pink); }
         .done-col .column-header { background-color: var(--cyber-pink); color: white;}
 
-        /* Task Cards */
         .task-card {
-           background-color: rgba(40, 44, 52, 0.8); /* Lebih terang sedikit dari panel */
-            border: 1px solid rgba(0, 173, 181, 0.3); /* Border halus */
+           background-color: rgba(40, 44, 52, 0.8); 
+            border: 1px solid rgba(0, 173, 181, 0.3); 
             border-left: 5px solid var(--cyber-cyan);
             padding: 15px;
             cursor: grab;
@@ -211,7 +191,6 @@
         .task-card p { margin: 0; font-size: 0.85rem; color: #8a8e9c; }
         .task-card .tag { display: inline-block; background: #333; padding: 2px 6px; margin-top: 8px; font-size: 0.75rem; color: var(--cyber-cyan);}
 
-        /* Upload Section */
         .upload-section {
             margin-top: 20px;
             padding: 20px;
@@ -226,17 +205,12 @@
             font-size: 2rem; z-index: 999; font-family: 'VT323', monospace;
         }
 
-        /* --- KONSULTASI GRID --- */
-        /* --- KONSULTASI GRID (TAMPILAN KALENDER) --- */
-        /* --- 1. KUNCI RESPONSIVITAS GLOBAL --- */
         * {
             box-sizing: border-box;
         }
 
-        /* --- 2. KONSULTASI GRID (TAMPILAN KALENDER) --- */
-        /* --- PERBAIKAN TOMBOL NAVIGASI KALENDER --- */
         .nav-btn {
-            width: auto !important; /* Mencegah tombol melar 100% */
+            width: auto !important;
             min-width: 40px;
             padding: 5px 15px !important;
             background: rgba(0, 0, 0, 0.5) !important;
@@ -252,9 +226,8 @@
             box-shadow: 0 0 10px var(--cyber-cyan) !important;
         }
 
-        /* --- PERBAIKAN KALENDER AGAR MENYAMPING --- */
         .calendar-grid {
-            display: grid !important; /* Memaksa kotak agar berjejer menyamping */
+            display: grid !important;
             grid-template-columns: repeat(7, minmax(30px, 45px));
             justify-content: center;
             gap: 6px;
@@ -277,7 +250,7 @@
 
         .day-box {
             width: 100%;
-            aspect-ratio: 1; /* Memaksa elemen tetap berbentuk persegi */
+            aspect-ratio: 1;
             display: flex; 
             justify-content: center; 
             align-items: center;
@@ -306,7 +279,6 @@
         .day-box.rescheduled { background: var(--cyber-pink); color: #000; border-color: var(--cyber-pink); font-weight: bold; }
         .day-box.new-date { background: var(--cyber-cyan); color: #000; border-color: var(--cyber-cyan); font-weight: bold; box-shadow: 0 0 10px var(--cyber-cyan); }
 
-        /* --- METRIK & ANALITIK --- */
         .metrics-panel {
             display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;
             background: rgba(0, 0, 0, 0.4); padding: 15px; border: 1px solid var(--cyber-cyan);
@@ -319,84 +291,35 @@
         .metric-title { font-size: 0.8rem; color: #8a8e9c; }
         .metric-value { font-family: 'VT323', monospace; font-size: 2rem; margin-top: 5px; }
         
-        /* Bar Progress */
         .progress-container { flex: 2; min-width: 200px; padding: 0 10px; }
         .progress-text { font-family: 'VT323', monospace; font-size: 1.2rem; color: var(--cyber-cyan); margin-bottom: 5px; }
         .progress-bar-bg { width: 100%; height: 15px; border: 1px solid var(--cyber-cyan); background: #000; }
         .progress-bar-fill { height: 100%; background: var(--cyber-cyan); box-shadow: 0 0 10px var(--cyber-cyan); transition: width 0.8s ease-in-out; }
 
-        /* --- 3. RESPONSIVE LAYOUT UNTUK HP (MOBILE FRIENDLY) --- */
         @media (max-width: 768px) {
             body { padding: 10px; padding-bottom: 70px; }
             h1 { font-size: 1.5rem; }
             
-            .top-controls { 
-                flex-direction: column; 
-                gap: 15px; 
-                text-align: center; 
-            }
+            .top-controls { flex-direction: column; gap: 15px; text-align: center; }
+            .scrum-board { flex-direction: column; gap: 15px; overflow-x: hidden; }
+            .column { min-width: 100%; min-height: auto; }
             
-            /* Scrum Board ditekuk ke bawah di layar kecil */
-            .scrum-board { 
-                flex-direction: column; 
-                gap: 15px; 
-                overflow-x: hidden;
-            }
-            .column { 
-                min-width: 100%; 
-                min-height: auto;
-            }
-            
-            /* Kalender menyesuaikan layar HP */
-            .calendar-grid {
-                gap: 3px;
-                padding: 10px;
-            }
+            .calendar-grid { gap: 3px; padding: 10px; }
             .day-box { font-size: 0.9rem; }
             
-            /* Notifikasi Guru ditekuk ke bawah */
-            .teacher-notif { 
-                flex-direction: column; 
-                align-items: flex-start; 
-                gap: 10px; 
-            }
-            .teacher-notif > div:last-child { 
-                flex-direction: column; 
-                width: 100%; 
-            }
-            .teacher-notif button, .teacher-notif input { 
-                width: 100%; 
-                margin-top: 5px; 
-            }
-            .teacher-notif div[style*="border-left"] { 
-                border-left: none !important; 
-                padding-left: 0 !important; 
-                flex-direction: column; 
-                width: 100%;
-            }
-            
+            .teacher-notif { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .teacher-notif > div:last-child { flex-direction: column; width: 100%; }
+            .teacher-notif button, .teacher-notif input { width: 100%; margin-top: 5px; }
+            .teacher-notif div[style*="border-left"] { border-left: none !important; padding-left: 0 !important; flex-direction: column; width: 100%; }
         }
 
-        /* Tampilan Notifikasi Guru yang lebih rapi */
         .teacher-notif { 
-            background: rgba(0, 0, 0, 0.5); 
-            border-left: 4px solid var(--cyber-yellow); 
-            padding: 15px; 
-            margin-bottom: 10px; 
-            font-size: 0.95rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: rgba(0, 0, 0, 0.5); border-left: 4px solid var(--cyber-yellow); 
+            padding: 15px; margin-bottom: 10px; font-size: 0.95rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
         .teacher-notif input[type="date"] { width: auto; margin-bottom: 0; padding: 5px; }
-        .day-box:hover { border-color: var(--cyber-yellow); transform: scale(1.2); z-index: 10; }
         
-        /* Warna Status */
-        .day-box.pending { background: var(--cyber-yellow); box-shadow: 0 0 5px var(--cyber-yellow); }
-        .day-box.approved { background: var(--cyber-cyan); box-shadow: 0 0 5px var(--cyber-cyan); }
-        .day-box.rescheduled { background: var(--cyber-pink); box-shadow: 0 0 5px var(--cyber-pink); }
-        
-        /* Tooltip saat di-hover */
         .day-box::after {
             content: attr(data-info); position: absolute; bottom: 120%; left: 50%;
             transform: translateX(-50%); background: #000; color: #fff; padding: 4px 8px;
@@ -405,9 +328,6 @@
         }
         .day-box:hover::after { opacity: 1; }
 
-        .teacher-notif { background: rgba(229, 192, 43, 0.1); border-left: 3px solid var(--cyber-yellow); padding: 10px; margin-bottom: 10px; font-size: 0.9rem;}
-
-        /* --- MODAL TASK DETAIL & CHAT --- */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85); z-index: 1000;
@@ -416,17 +336,14 @@
         }
 
         .modal-content {
-            background: var(--panel-bg);
-            border: 2px solid var(--cyber-cyan);
+            background: var(--panel-bg); border: 2px solid var(--cyber-cyan);
             width: 90%; max-width: 500px; max-height: 90vh;
             display: flex; flex-direction: column;
-            box-shadow: 0 0 20px rgba(0, 173, 181, 0.3);
-            position: relative;
+            box-shadow: 0 0 20px rgba(0, 173, 181, 0.3); position: relative;
         }
 
         .modal-header {
-            background: rgba(0, 173, 181, 0.1);
-            border-bottom: 1px solid var(--cyber-cyan);
+            background: rgba(0, 173, 181, 0.1); border-bottom: 1px solid var(--cyber-cyan);
             padding: 15px; text-align: center;
         }
 
@@ -439,23 +356,45 @@
 
         .chat-bubble {
             padding: 10px; border-radius: 4px; max-width: 85%;
-            font-size: 0.9rem; position: relative;
-            border-left: 3px solid;
+            font-size: 0.9rem; position: relative; border-left: 3px solid;
         }
 
-        /* Warna khusus Guru dan Siswa */
         .chat-guru { background: rgba(0, 173, 181, 0.1); border-color: var(--cyber-cyan); align-self: flex-start; }
         .chat-siswa { background: rgba(229, 192, 43, 0.1); border-color: var(--cyber-yellow); align-self: flex-end; text-align: right; }
         
         .chat-meta { font-size: 0.7rem; color: #8a8e9c; margin-bottom: 5px; font-family: 'VT323', monospace; letter-spacing: 1px;}
 
         .chat-input-area {
-            display: flex; gap: 10px; padding: 15px;
-            border-top: 1px solid var(--cyber-cyan);
+            display: flex; gap: 10px; padding: 15px; border-top: 1px solid var(--cyber-cyan);
         }
         
         .chat-input-area input { margin-bottom: 0; width: 100%; }
         .close-modal-btn { background: var(--cyber-pink); color: white; margin: 0 15px 15px 15px; width: auto; }
+
+        .file-badge {
+            display: inline-block; padding: 3px 6px; background: rgba(0, 173, 181, 0.1);
+            border: 1px solid var(--cyber-cyan); color: var(--cyber-cyan);
+            text-decoration: none; font-size: 0.75rem; transition: 0.2s;
+            box-shadow: 2px 2px 0 rgba(0, 173, 181, 0.3); white-space: nowrap;
+            overflow: hidden; text-overflow: ellipsis; max-width: 100%;
+        }
+        .file-badge:hover { background: var(--cyber-cyan); color: #000; box-shadow: 0 0 5px var(--cyber-cyan); }
+
+        .terminal-list-item {
+            background: transparent; border-left: 3px solid var(--cyber-cyan);
+            padding: 5px 10px; margin-bottom: 8px; font-family: 'Share Tech Mono', monospace;
+            position: relative; text-align: left;
+        }
+        .terminal-list-item::before {
+            content: '>'; color: var(--cyber-yellow); position: absolute;
+            left: -15px; animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        
+        .terminal-list-item a { color: var(--cyber-cyan); text-decoration: none; font-size: 0.95rem; }
+        .terminal-list-item a:hover { text-decoration: underline; text-shadow: 0 0 5px var(--cyber-cyan); }
+        .file-time { font-size: 0.8rem; color: #8a8e9c; display: block; margin-top: 3px; font-family: 'VT323', monospace; letter-spacing: 1px; }
+
     </style>
 </head>
 <body>
@@ -560,8 +499,7 @@
                     <div id="modal-grading-actions"></div>
                 </div>
                 
-                <div id="chat-box" class="chat-box">
-                    </div>
+                <div id="chat-box" class="chat-box"></div>
                 
                 <div class="chat-input-area">
                     <input type="hidden" id="active-modal-task-id">
@@ -574,13 +512,13 @@
     </div>
 
     <script>
-        // PASTIKAN MENGGUNAKAN URL DEPLOYMENT GAS YANG BARU!
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbx_Y-t7i1eFx3riF3r8cQngxvEMOeovxu2bP4zd7IIRFPIvrILH683B3gVk5lp-FyjWvw/exec";
+        // MASUKKAN URL GAS TERBARU ANDA DI SINI SETELAH NEW DEPLOYMENT
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbzzU-uUEJ22jkP2hIVhKV7Rw3kqsxPj1iGXSMbbisOamzBceZnZlzc-GCfOw1eYeSc5qA/exec";
         
         let currentUser = null;
         let currentRole = null;
         let currentProjectTitle = "";
-        let currentlyViewedStudent = null; // Menyimpan ID/Username siswa yang sedang dipantau Guru
+        let currentlyViewedStudent = null; 
         let consultationData = [];
 
         function showLoading(show) { document.getElementById('loading-overlay').style.display = show ? 'flex' : 'none'; }
@@ -601,25 +539,20 @@
                     currentProjectTitle = result.user.projectTitle || "PROJECT BELUM DIBERI JUDUL";
                     
                     document.getElementById('login-screen').style.display = 'none';
+                    document.getElementById('auth-logos').style.display = 'none'; 
                     document.getElementById('app-screen').style.display = 'block';
                     document.getElementById('active-user-display').innerText = `${currentUser.toUpperCase()} [${currentRole.toUpperCase()}]`;
-                    // ... kode lain di dalam if success ...
-                    document.getElementById('login-screen').style.display = 'none';
-                    document.getElementById('auth-logos').style.display = 'none'; // <--- TAMBAHKAN BARIS INI
-                    document.getElementById('app-screen').style.display = 'block';
                     
                     if (currentRole === 'Guru') {
-                        // Tampilkan panel Guru, ganti judul, dan ambil daftar siswa
                         document.getElementById('teacher-panel').style.display = 'block';
                         document.getElementById('dynamic-project-title').innerText = "// DASHBOARD MONITORING GURU";
                         loadStudentList();
-                        loadConsultations(); // <--- TAMBAHKAN INI
+                        loadConsultations(); 
                     } else {
-                        // Tampilkan judul project milik siswa, dan load task-nya
                         document.getElementById('dynamic-project-title').innerText = `// ${currentProjectTitle.toUpperCase()}`;
-                        currentlyViewedStudent = currentUser; // Siswa memantau dirinya sendiri
+                        currentlyViewedStudent = currentUser; 
                         loadTasks();
-                        loadConsultations(); // <--- TAMBAHKAN INI 
+                        loadConsultations(); 
                     }
                 } else {
                     document.getElementById('login-msg').innerText = "AKSES DITOLAK.";
@@ -628,27 +561,19 @@
             showLoading(false);
         }
 
-        function logout() {
-             location.reload(); 
-        } // Cara tercepat reset state
+        function logout() { location.reload(); } 
 
-        // --- FUNGSI BARU: MENGISI DROPDOWN TASK UNTUK UPLOAD ---
         function updateTaskDropdown(tasks) {
             const select = document.getElementById('uploadTaskId');
-            // Reset isi dropdown
             select.innerHTML = '<option value="">-- PILIH TASK UNTUK DOKUMENTASI --</option>';
-            
-            // Masukkan setiap task sebagai opsi baru
             tasks.forEach(task => {
                 let option = document.createElement('option');
                 option.value = task.taskId;
-                // Menampilkan status dan nama task di dropdown agar jelas
                 option.text = `[${task.status}] - ${task.taskName}`;
                 select.appendChild(option);
             });
         }
 
-        // --- FITUR GURU: MEMUAT DAFTAR SISWA ---
         async function loadStudentList() {
             showLoading(true);
             try {
@@ -668,13 +593,11 @@
             showLoading(false);
         }
 
-        // --- FITUR GURU: SAAT GURU MEMILIH SISWA DARI DROPDOWN ---
         function loadBoardForSelectedStudent() {
             const selector = document.getElementById('student-selector');
             currentlyViewedStudent = selector.value;
             
             if (currentlyViewedStudent) {
-                // Ambil text dari dropdown (judul project) untuk ditampilkan sementara
                 const selectedText = selector.options[selector.selectedIndex].text;
                 document.getElementById('dynamic-project-title').innerText = `// VIEWING: ${selectedText.toUpperCase()}`;
                 loadTasks();
@@ -684,7 +607,6 @@
             }
         }
 
-        // --- FITUR GURU: UBAH JUDUL PROJECT KELOMPOK ---
         async function updateProjectTitle() {
             if (!currentlyViewedStudent) { alert("Pilih kelompok terlebih dahulu!"); return; }
             const newTitle = document.getElementById('new-project-title').value;
@@ -699,7 +621,7 @@
                 const result = await response.json();
                 if(result.status === 'success') {
                     alert("Judul project kelompok berhasil diperbarui.");
-                    loadStudentList(); // Refresh dropdown
+                    loadStudentList(); 
                     document.getElementById('dynamic-project-title').innerText = `// VIEWING: [${currentlyViewedStudent}] - ${newTitle.toUpperCase()}`;
                     document.getElementById('new-project-title').value = '';
                 }
@@ -707,7 +629,6 @@
             showLoading(false);
         }
 
-        // --- MEMUAT TASK SESUAI TARGET (Siswa Sendiri / Kelompok yang Dipilih Guru) ---
         async function loadTasks() {
             showLoading(true);
             document.querySelectorAll('.task-card').forEach(el => el.remove());
@@ -721,8 +642,6 @@
                 if(result.status === 'success') {
                     result.data.forEach(task => renderTaskCard(task));
                     updateTaskDropdown(result.data);
-                    
-                    // --- TAMBAHAN BARU: Gambar dashboard berdasarkan data task ---
                     renderMetrics(result.data); 
                 }
             } catch (error) {}
@@ -734,10 +653,7 @@
             const card = document.createElement('div');
             card.className = 'task-card'; card.id = task.taskId; card.draggable = true; card.ondragstart = drag;
             
-            // --- TAMBAHAN BARU: Event Listener untuk membuka Modal ---
-            // Kita menggunakan onclick, namun mencegahnya berkonflik jika user sedang melakukan drag and drop
             card.onclick = (e) => {
-                // Jangan buka modal jika yang diklik adalah link dokumen
                 if(e.target.tagName !== 'A') {
                     openTaskModal(task);
                 }
@@ -748,10 +664,18 @@
             if(task.status === "FINISHED") borderColor = "var(--cyber-pink)";
             card.style.borderLeftColor = borderColor;
 
-            let fileIndicator = task.fileUrl ? 
-                `<br><a href="${task.fileUrl}" target="_blank" class="file-badge">> LIHAT DOKUMEN_</a>` : '';
+            let filesHtml = '';
+            if (task.files && task.files.length > 0) {
+                filesHtml = `<div style="margin-top: 10px; border-top: 1px dashed rgba(0, 173, 181, 0.4); padding-top: 8px;">`;
+                filesHtml += `<span style="font-size: 0.75rem; color: var(--cyber-yellow); font-family: 'VT323', monospace; letter-spacing: 1px;">// PROGRESS DOKUMEN (${task.files.length}):</span>`;
+                task.files.forEach((f, idx) => {
+                    filesHtml += `<a href="${f.url}" target="_blank" class="file-badge" style="display:block; margin-top:5px;" title="Dikumpulkan: ${f.time || ''}">> V${idx+1}: ${f.name}</a>`;
+                });
+                filesHtml += `</div>`;
+            } else if (task.fileUrl) {
+                filesHtml = `<br><a href="${task.fileUrl}" target="_blank" class="file-badge">> LIHAT DOKUMEN_</a>`;
+            }
 
-            // Cari baris card.innerHTML = ` ... `, lalu ubah menjadi:
             let scoreBadge = task.score ? `<div style="margin-top:8px; color:var(--cyber-yellow); font-family:'VT323'; font-size:1.1rem;">>> SKOR: ${task.score}/100</div>` : '';
 
             card.innerHTML = `
@@ -759,7 +683,7 @@
                 <p>ID: ${task.taskId}</p>
                 <p>Deadline: ${deadlineText}</p>
                 <span class="tag">@${task.assignee}</span>
-                ${fileIndicator}
+                ${filesHtml}
                 ${scoreBadge}
             `;
             const column = document.getElementById(task.status);
@@ -775,19 +699,17 @@
             try {
                 const response = await fetch(GAS_URL, {
                     method: 'POST',
-                    // Jika guru yang menambahkan, assignee-nya tetap kelompok/siswa tersebut, bukan nama guru
                     body: JSON.stringify({ action: 'addTask', taskName: taskName, startDate: new Date().toISOString(), endDate: deadline, assignee: currentlyViewedStudent })
                 });
                 const result = await response.json();
                 if(result.status === 'success') {
                     renderTaskCard({ taskId: result.taskId, taskName: taskName, status: 'TODO', endDate: deadline, assignee: currentlyViewedStudent });
-                    // -- TAMBAHKAN BARIS INI: Tambahkan opsi baru langsung ke dropdown --
+                    
                     const select = document.getElementById('uploadTaskId');
                     let option = document.createElement('option');
                     option.value = result.taskId;
                     option.text = `[TODO] - ${taskName}`;
                     select.appendChild(option);
-                    // -----------------------------------------------------------------
 
                     document.getElementById('newTaskName').value = '';
                 }
@@ -835,6 +757,7 @@
                     if(data.status === 'success') {
                         document.getElementById('previewArea').innerHTML = `<a href="${data.url}" target="_blank" style="color:var(--cyber-yellow); text-decoration: none; border-bottom: 1px solid var(--cyber-yellow);">> PREVIEW DOKUMEN TERSIMPAN</a>`;
                         alert("File berhasil diunggah.");
+                        loadTasks(); 
                     }
                 } catch(err) {}
                 showLoading(false);
@@ -842,11 +765,9 @@
             reader.readAsDataURL(file);
         }
 
-        // --- STATE UNTUK NAVIGASI KALENDER ---
         let viewYear = new Date().getFullYear();
         let viewMonth = new Date().getMonth();
 
-        // Fungsi mengubah bulan
         function changeMonth(offset) {
             viewMonth += offset;
             if (viewMonth < 0) {
@@ -868,7 +789,6 @@
             
             let myReqs = consultationData.filter(req => req.kelompok === currentUser);
             
-            // --- FITUR MENGHITUNG TOTAL KONSULTASI YANG SELESAI/DISETUJUI ---
             let totalSelesai = myReqs.filter(req => req.status === 'APPROVED').length;
             let counterDiv = document.createElement('div');
             counterDiv.style.textAlign = 'center';
@@ -878,7 +798,6 @@
             counterDiv.innerHTML = `TOTAL KONSULTASI DISELESAIKAN: <span style="color:var(--cyber-cyan); font-size:1.5rem;">${totalSelesai}</span>`;
             notifArea.appendChild(counterDiv);
             
-            // Render Notifikasi Teks
             if (myReqs.length > 0) {
                 myReqs.forEach(req => {
                     let div = document.createElement('div');
@@ -902,41 +821,38 @@
                 });
             }
             
-            // --- HEADER KALENDER DENGAN TOMBOL NAVIGASI ---
             const monthNames = ["JANUARI", "FEBRUARI", "MARET", "APRIL", "MEI", "JUNI", "JULI", "AGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DESEMBER"];
             
             let headerContainer = document.createElement('div');
             headerContainer.style.display = 'flex';
             headerContainer.style.justifyContent = 'center';
             headerContainer.style.alignItems = 'center';
-            headerContainer.style.gap = '20px'; // Jarak aman antara tombol dan teks
+            headerContainer.style.gap = '20px'; 
             headerContainer.style.marginBottom = '15px';
             headerContainer.style.width = '100%';
 
             let btnPrev = document.createElement('button');
-            btnPrev.innerHTML = '&#9664;'; // Panah Kiri
-            btnPrev.className = 'nav-btn'; // Terapkan class baru
+            btnPrev.innerHTML = '&#9664;'; 
+            btnPrev.className = 'nav-btn'; 
             btnPrev.onclick = () => changeMonth(-1);
 
             let title = document.createElement('h3');
             title.style.color = "var(--cyber-yellow)";
             title.style.margin = "0";
-            title.style.whiteSpace = "nowrap"; // MENCEGAH TEKS TERPOTONG KE BAWAH
+            title.style.whiteSpace = "nowrap"; 
             title.style.fontSize = "1.3rem";
             title.innerText = `[ ${monthNames[viewMonth]} ${viewYear} ]`;
 
             let btnNext = document.createElement('button');
-            btnNext.innerHTML = '&#9654;'; // Panah Kanan
-            btnNext.className = 'nav-btn'; // Terapkan class baru
+            btnNext.innerHTML = '&#9654;'; 
+            btnNext.className = 'nav-btn'; 
             btnNext.onclick = () => changeMonth(1);
 
             headerContainer.appendChild(btnPrev);
             headerContainer.appendChild(title);
             headerContainer.appendChild(btnNext);
             container.appendChild(headerContainer);
-            // ----------------------------------------------
 
-            // --- RENDER GRID ---
             let grid = document.createElement('div');
             grid.className = 'calendar-grid';
             
@@ -950,7 +866,7 @@
 
             let firstDay = new Date(viewYear, viewMonth, 1).getDay();
             let daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
-            let today = new Date(); // Untuk acuan hari ini
+            let today = new Date(); 
 
             for(let i = 0; i < firstDay; i++) {
                 let empty = document.createElement('div');
@@ -964,15 +880,12 @@
                 box.className = 'day-box';
                 box.innerText = i;
                 
-                // Pengecekan riwayat
                 let existingReq = myReqs.find(req => req.tanggal.startsWith(dateStr));
                 let isRescheduledDate = myReqs.find(req => req.status === 'RESCHEDULED' && req.pesanGuru && req.pesanGuru.startsWith(dateStr));
                 
-                // Pengecekan masa lalu
                 let isPast = new Date(viewYear, viewMonth, i) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
                 
                 if (existingReq) {
-                    // Jika ada riwayat, TAMPILKAN meskipun di masa lalu
                     box.classList.add(existingReq.status.toLowerCase());
                     let jamReq = existingReq.tanggal.split(' ')[1] || '';
                     box.title = `Status: ${existingReq.status} (Jam: ${jamReq})`;
@@ -981,11 +894,9 @@
                     let jamResch = isRescheduledDate.pesanGuru.split(' ')[1] || '';
                     box.title = `JADWAL BARU DARI GURU (Jam: ${jamResch})`;
                 } else if (isPast) {
-                    // Jika tidak ada riwayat DAN ini di masa lalu, maka matikan kotaknya
                     box.classList.add('past');
                     box.title = "Tidak ada jadwal (Tanggal sudah lewat)";
                 } else {
-                    // Tanggal kosong di masa depan, siap di-booking
                     box.onclick = () => requestDate(dateStr);
                     box.title = "Klik untuk mengajukan jadwal";
                 }
@@ -995,13 +906,9 @@
         }
 
         async function requestDate(dateString) {
-            // Meminta input jam dari siswa menggunakan prompt bawaan browser
             let timeInput = prompt(`Anda memilih tanggal ${dateString}.\nMasukkan jam konsultasi (Format 24 Jam, contoh: 14:30):`, "13:00");
-            
-            // Jika siswa menekan cancel atau mengosongkan, batalkan pengajuan
             if (timeInput === null || timeInput.trim() === "") return; 
 
-            // Gabungkan tanggal dan jam menjadi satu string
             let fullDateTime = `${dateString} ${timeInput}`;
 
             if(confirm(`Kirim pengajuan jadwal untuk: ${fullDateTime}?`)) {
@@ -1012,11 +919,11 @@
                         body: JSON.stringify({ 
                             action: 'requestConsultation', 
                             username: currentUser, 
-                            tanggal: fullDateTime // Mengirim "YYYY-MM-DD HH:MM"
+                            tanggal: fullDateTime 
                         }) 
                     });
                     alert('Pengajuan berhasil dikirim ke Guru!');
-                    loadConsultations(); // Refresh data
+                    loadConsultations(); 
                 } catch(e) {}
                 showLoading(false);
             }
@@ -1039,8 +946,6 @@
             } catch(e) {}
         }
 
-        // Tampilan Notifikasi Guru
-       // Tampilan Notifikasi Guru (Dibuat lebih rapi secara horizontal)
         function renderTeacherNotifications() {
             const area = document.getElementById('teacher-notif-area');
             area.innerHTML = '<h3 style="color:var(--cyber-yellow); font-size:1.2rem; border-bottom:1px solid var(--cyber-yellow); padding-bottom:5px;">// PERMINTAAN KONSULTASI BARU</h3>';
@@ -1055,7 +960,6 @@
                 let div = document.createElement('div');
                 div.className = 'teacher-notif';
                 
-                // Format tampilan tanggal yang masuk agar lebih rapi jika mengandung format ISO "T" atau ".000Z"
                 let cleanDate = req.tanggal.replace('T', ' ').replace('.000Z', '');
 
                 div.innerHTML = `
@@ -1079,7 +983,6 @@
             const newDateTime = document.getElementById(`resch-${reqId}`).value;
             if(!newDateTime) return alert("Pilih tanggal & jam pengganti terlebih dahulu.");
             
-            // Format datetime-local menghasilkan "YYYY-MM-DDTHH:MM", kita ubah 'T' jadi spasi agar rapi
             const formattedNewDate = newDateTime.replace('T', ' ');
             respondConsultation(reqId, 'RESCHEDULED', formattedNewDate);
         }
@@ -1088,12 +991,11 @@
             showLoading(true);
             try {
                 await fetch(GAS_URL, { method: 'POST', body: JSON.stringify({ action: 'respondConsultation', reqId: reqId, newStatus: status, pesanGuru: note }) });
-                loadConsultations(); // Refresh
+                loadConsultations(); 
             } catch(e) {}
             showLoading(false);
         }
 
-        // --- LOGIKA MODAL & KOMENTAR ---
         function openTaskModal(task) {
             document.getElementById('task-modal').style.display = 'flex';
             document.getElementById('modal-task-name').innerText = task.taskName;
@@ -1101,15 +1003,27 @@
             document.getElementById('active-modal-task-id').value = task.taskId;
             
             const fileArea = document.getElementById('modal-file-area');
-            if (task.fileUrl) {
+            fileArea.innerHTML = '';
+            
+            if (task.files && task.files.length > 0) {
+                fileArea.innerHTML = '<p style="font-size:0.9rem; color:var(--cyber-yellow); font-family:\'VT323\'; margin-bottom:10px;">// SYSTEM.LOG: RIWAYAT_DOKUMEN</p>';
+                task.files.forEach((file, idx) => {
+                    let item = document.createElement('div');
+                    item.className = 'terminal-list-item';
+                    item.innerHTML = `
+                        <a href="${file.url}" target="_blank">FILE_0${idx + 1}: ${file.name}</a>
+                        <span class="file-time">TIMESTAMP: ${file.time || 'N/A'}</span>
+                    `;
+                    fileArea.appendChild(item);
+                });
+            } else if (task.fileUrl) {
                 fileArea.innerHTML = `<a href="${task.fileUrl}" target="_blank" style="color:var(--cyber-cyan); text-decoration:none; border-bottom:1px solid var(--cyber-cyan);">> AKSES LAMPIRAN DOKUMEN <</a>`;
             } else {
-                fileArea.innerHTML = `<span style="color:#555; font-size:0.8rem;">[Tidak ada dokumen terlampir]</span>`;
+                fileArea.innerHTML = `<span style="color:#8a8e9c; font-size:0.8rem;">[Tidak ada dokumen terlampir]</span>`;
             }
 
-            // --- LOGIKA TAP-TO-MOVE (Memunculkan tombol sesuai status) ---
             const statusArea = document.getElementById('modal-status-actions');
-            statusArea.innerHTML = ''; // Bersihkan tombol sebelumnya
+            statusArea.innerHTML = ''; 
 
             let btnStyle = "padding:8px 15px; font-size:0.9rem; font-family:'VT323', monospace; cursor:pointer; box-shadow: 2px 2px 0 var(--cyber-pink);";
             
@@ -1124,11 +1038,9 @@
                 statusArea.innerHTML = `<button onclick="changeStatusFromModal('WIP')" style="${btnStyle} background:rgba(0,0,0,0.5); border:1px solid var(--cyber-yellow); color:var(--cyber-yellow); box-shadow:none;">< REVISI (KEMBALI KE WIP)</button>`;
             }
 
-            // --- LOGIKA PENILAIAN (GRADING) ---
             const gradingArea = document.getElementById('modal-grading-actions');
             gradingArea.innerHTML = '';
             
-            // Jika Guru login dan task sudah Selesai (atau WIP), tampilkan form input nilai
             if (currentRole === 'Guru' && (task.status === 'FINISHED' || task.status === 'WIP')) {
                  gradingArea.innerHTML = `
                     <div style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--cyber-yellow); text-align: center;">
@@ -1138,7 +1050,6 @@
                     </div>
                  `;
             } else if (task.score) {
-                 // Jika Siswa login, hanya tampilkan nilainya saja
                  gradingArea.innerHTML = `
                     <div style="margin-top: 15px; padding: 10px; background: rgba(229, 192, 43, 0.1); border: 1px solid var(--cyber-yellow); text-align: center;">
                         <span style="color: var(--text-main);">Evaluasi Mentor: </span>
@@ -1152,10 +1063,9 @@
 
         function closeTaskModal() {
             document.getElementById('task-modal').style.display = 'none';
-            document.getElementById('chat-box').innerHTML = ''; // Bersihkan chat
+            document.getElementById('chat-box').innerHTML = ''; 
         }
 
-        // --- FUNGSI MENGIRIM PERUBAHAN STATUS DARI MODAL ---
         async function changeStatusFromModal(newStatus) {
             const taskId = document.getElementById('active-modal-task-id').value;
             showLoading(true);
@@ -1168,11 +1078,9 @@
                         newStatus: newStatus 
                     })
                 });
-                closeTaskModal(); // Tutup modal setelah ditekan
-                loadTasks();      // Refresh tampilan board
+                closeTaskModal(); 
+                loadTasks();      
                 
-                // Tambahkan peringatan visual opsional
-                // alert(`Status tugas berhasil diubah menjadi ${newStatus}.`);
             } catch (error) {
                 console.error("Gagal sinkronisasi status dengan server.", error);
                 alert("Gagal mengubah status tugas.");
@@ -1193,7 +1101,7 @@
                     body: JSON.stringify({ action: 'rateTask', taskId: taskId, score: score }) 
                 });
                 closeTaskModal();
-                loadTasks(); // Refresh board agar nilai muncul di kartu & metrik terupdate
+                loadTasks(); 
             } catch (error) {
                 alert("Gagal menyimpan nilai.");
             }
@@ -1218,7 +1126,6 @@
 
                 result.data.forEach(msg => {
                     let bubble = document.createElement('div');
-                    // Tentukan warna berdasarkan Role
                     bubble.className = `chat-bubble ${msg.role === 'Guru' ? 'chat-guru' : 'chat-siswa'}`;
                     bubble.innerHTML = `
                         <div class="chat-meta">${msg.sender.toUpperCase()} [${msg.role}] - ${msg.timestamp}</div>
@@ -1227,7 +1134,6 @@
                     chatBox.appendChild(bubble);
                 });
                 
-                // Auto-scroll ke pesan terbawah
                 chatBox.scrollTop = chatBox.scrollHeight;
                 
             } catch (error) {
@@ -1251,7 +1157,7 @@
                     body: JSON.stringify({ action: 'addComment', taskId: taskId, username: currentUser, role: currentRole, message: message })
                 });
                 inputEl.value = '';
-                loadComments(taskId); // Refresh chat
+                loadComments(taskId); 
             } catch (error) {
                 alert("Gagal mengirim pesan.");
             }
@@ -1296,5 +1202,4 @@
         ProjectTrack // M. Aziz Al Assad, S.T., Gr. // 2026
     </div>
 </body>
-
 </html>
